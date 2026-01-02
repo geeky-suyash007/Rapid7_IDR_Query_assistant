@@ -35,6 +35,37 @@ Python 3.9+
 
 Streamlit
 
-Google Gemini API
 
-Prompt-based schema validation
+Example Input / Output
+
+Input:
+Show high severity malware alerts
+
+Output:
+where(severity="High" AND signature_name CONTAINS "MALWARE")
+
+Setup
+pip install streamlit google-generativeai
+streamlit run app.py
+
+
+Set API key:
+
+export GOOGLE_API_KEY="your_api_key"
+
+Use Cases
+
+SOC analyst query assistance
+
+SIEM query standardization
+
+LLM-safe security automation
+
+SOAR pipeline integration
+
+
+
+Disclaimer
+
+For query generation only. Always validate queries before production use.
+
