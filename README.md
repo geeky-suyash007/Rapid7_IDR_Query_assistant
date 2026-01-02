@@ -3,70 +3,71 @@ A lightweight GenAI-powered assistant that converts natural language security qu
 
 What It Does
 
-Accepts natural language SIEM queries
+  Accepts natural language SIEM queries
 
-Generates single-line, valid InsightIDR queries
+  Generates single-line, valid InsightIDR queries
 
-Enforces allowed fields, operators, and logic
+  Enforces allowed fields, operators, and logic
 
-Rejects non-security-related questions safely
+  Rejects non-security-related questions safely
 
-Web UI built with Streamlit
+  Web UI built with Streamlit
 
 Architecture
 
-User → Streamlit UI → Gemini LLM (system prompt + schema) → InsightIDR Query
+  User → Streamlit UI → Gemini LLM (system prompt + schema) → InsightIDR Query
 
 Key Features
 
-Deterministic output (temperature = 0.0)
+  Deterministic output (temperature = 0.0)
 
-Schema-restricted query generation
+  Schema-restricted query generation
 
-Hallucination-resistant prompt design
+  Hallucination-resistant prompt design
 
-Security-first guardrails
+  Security-first guardrails
 
-Easy to extend for SOAR / SIEM automation
+  Easy to extend for SOAR / SIEM automation
 
 Tech Stack
 
-Python 3.9+
+  Python 3.9+
 
-Streamlit
+  Streamlit
+
+  Gemini API
 
 
 Example Input / Output
 
-Input:
-Show high severity malware alerts
+  Input:
+  Show high severity malware alerts
 
-Output:
-where(severity="High" AND signature_name CONTAINS "MALWARE")
+  Output:
+  where(severity="High" AND signature_name CONTAINS "MALWARE")
 
-Setup
-pip install streamlit google-generativeai
-streamlit run app.py
+  Setup
+  pip install streamlit google-generativeai
+  streamlit run app.py
 
 
 Set API key:
 
-export GOOGLE_API_KEY="your_api_key"
+  export GOOGLE_API_KEY="your_api_key"
 
 Use Cases
 
-SOC analyst query assistance
+  SOC analyst query assistance
 
-SIEM query standardization
+  SIEM query standardization
 
-LLM-safe security automation
+  LLM-safe security automation
 
-SOAR pipeline integration
+  SOAR pipeline integration
 
 
 
 Disclaimer
-
 For query generation only. Always validate queries before production use.
 
 <img width="1282" height="443" alt="image" src="https://github.com/user-attachments/assets/68421423-9a99-47cf-b861-52182e2f7392" />
