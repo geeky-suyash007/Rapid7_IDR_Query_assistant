@@ -69,3 +69,6 @@ Disclaimer
 
 For query generation only. Always validate queries before production use.
 
+<img width="1282" height="443" alt="image" src="https://github.com/user-attachments/assets/68421423-9a99-47cf-b861-52182e2f7392" />
+
+
