@@ -1,5 +1,3 @@
-import json
-import requests
 import streamlit as st
 
 st.title("Rapid7 InsightIDR Query Assistant")
@@ -7,7 +5,7 @@ st.title("Rapid7 InsightIDR Query Assistant")
 from google import genai
 from google.genai import types
 
-client = genai.Client(api_key="")
+client = genai.Client(api_key="AIzaSyCVIABJYuBxC7-PHEwgoCbIcVpi555cTCI")
 
 SYSTEM_PROMPT = """
 You are Rapid7 InsightIDR (SIEM solution) query generator.
@@ -112,12 +110,11 @@ where(severity ICONTAINS "MALICIOUS")groupby(asset)having(count>=5)
 query = st.text_input("Enter your query: ")
 
 if query:
-
     with st.spinner("Generating query..."):
         task_response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        config=types.GenerateContentConfig(
-        system_instruction=SYSTEM_PROMPT, temperature=0.0),
-        contents=query,
+            model="gemini-2.5-flash",
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT, temperature=0.0),
+            contents=query,
         )
     st.write(task_response.text)
