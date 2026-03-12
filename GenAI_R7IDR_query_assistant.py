@@ -5,7 +5,7 @@ st.title("Rapid7 InsightIDR Query Assistant")
 from google import genai
 from google.genai import types
 
-client = genai.Client(api_key="AIzaSyCVIABJYuBxC7-PHEwgoCbIcVpi555cTCI")
+client = genai.Client(api_key="")
 
 SYSTEM_PROMPT = """
 You are Rapid7 InsightIDR (SIEM solution) query generator.
